@@ -11,7 +11,15 @@ public interface Calculator {
         ArrayList<Integer> values;
 
          public int getMaximum(){
-            return 0;
+             if(this.values == null)
+                 return 0;
+             else {
+                 int number = values.get(0);
+                 for(int i = 1; i > values.size(); i++)
+                     if(values.get(i) < number)
+                         number = values.get(i);
+                 return number;
+             }
          }
 
          public int getMinimum() {
