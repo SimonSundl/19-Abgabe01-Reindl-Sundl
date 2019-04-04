@@ -12,23 +12,26 @@ public interface Calculator {
     class CalculatorImpl implements Calculator {
         ArrayList<Integer> values;
 
-        public int sum() {
+        public int sum(){
             if(this.values == null)
                 return 0;
-            else{
+            else {
+
                 int number = 0;
                 for(int i = 0; i < values.size(); i++)
                     number = number + values.get(i);
                 return number;
+
             }
         }
-         public int getMaximum(){
+
+        public int getMaximum(){
              if(this.values == null)
                  return 0;
              else {
                  int number = values.get(0);
-                 for(int i = 1; i > values.size(); i++)
-                     if(values.get(i) < number)
+                 for(int i = 1; i < values.size(); i++)
+                     if(values.get(i) > number)
                          number = values.get(i);
                  return number;
              }
