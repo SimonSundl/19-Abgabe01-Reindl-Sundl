@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public interface Calculator {
+    int sum();
+
     int getMaximum();
 
     int getMinimum();
@@ -10,6 +12,16 @@ public interface Calculator {
     class CalculatorImpl implements Calculator {
         ArrayList<Integer> values;
 
+        public int sum() {
+            if(this.values == null)
+                return 0;
+            else{
+                int number = 0;
+                for(int i = 0; i < values.size(); i++)
+                    number = number + values.get(i);
+                return number;
+            }
+        }
          public int getMaximum(){
              if(this.values == null)
                  return 0;
