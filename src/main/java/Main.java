@@ -10,6 +10,7 @@ public class Main {
 
         System.out.println(calc.getMinimum());
         System.out.println(calc.getMaximum());
+        System.out.println(calc.sum());
         // add other integers
 
         // output lowest number
